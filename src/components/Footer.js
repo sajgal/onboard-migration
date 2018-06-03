@@ -46,19 +46,6 @@ const Footer = props => {
           <div className="created-by">
             Created by <a href="https://www.sajgal.com">sajgal.com</a>
           </div>
-          <div className="contentful">
-            <a
-              href="https://www.contentful.com/"
-              rel="nofollow"
-              target="_blank"
-            >
-              <img
-                src="https://images.contentful.com/fo9twyrwpveg/7Htleo27dKYua8gio8UEUy/0797152a2d2f8e41db49ecbf1ccffdaa/PoweredByContentful_DarkBackground_MonochromeLogo.svg"
-                style={{ maxWidth: '100px', width: '100%' }}
-                alt="Powered by Contentful"
-              />
-            </a>
-          </div>
         </div>
       </div>
     </div>

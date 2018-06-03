@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,600,800|Gochi+Hand');
 
 :root {
-  --white: whitesmoke;
+  --white: white;
   --black: rgb(22, 22, 22);
-  --grey: #1f2020;
+  /* --grey: #1f2020; */
+  --grey: #5cc6ef;
   --blue: #117688;
   --logo-blue: #8DC9FD;
   --content-margin: 70px;
@@ -93,7 +94,7 @@ body {
   max-height: var(--hero-height);
   grid-area: 1 / 1 / -1 / -1;
   z-index: 1;
-  background: linear-gradient(transparent, var(--grey));
+  background: linear-gradient(transparent, var(--black));
   opacity: .5;
 }
 
@@ -126,21 +127,23 @@ body {
 
 .header-language i {
   margin-right: 2px;
-  color: grey;
+  color: var(--black);
 }
 
 .header-language .not-selected {
   padding: 0 5px;
-  color: grey;
+  color: var(--black);
 }
 
 .header-language a {
   padding: 0 5px;
-  color: var(--white);
+  color: #FFF;
+  font-weight: bold;
 }
 
 .logo {
   max-width: 170px;
+  font-weight: bold;
 }
 
 .logo img {
@@ -158,12 +161,12 @@ body {
   letter-spacing: 1.1px;
   padding: 3px 5px;
   cursor: pointer;
-  color: var(--grey);
+  color: var(--black);
 }
 
 button.button {
   border: none;
-  background: white;
+  background: whitesmoke;
   font-size: 15px;
   padding: 8px 15px;
   cursor: pointer;
@@ -171,14 +174,13 @@ button.button {
 }
 
 button.button:hover {
-  color: white;
+  color: whitesmoke;
   background: var(--grey);
 }
 
 .button-smol:hover {
   border-bottom: 1px solid var(--grey);
-  /* background: var(--grey); */
-  color: black;
+  color: var(--black);
 }
 
 .header-bottom {
@@ -266,7 +268,7 @@ button.button:hover {
 }
 
 .hero .text {
-  color: white;
+  color: whitesmoke;
   font-weight: 600;
   margin-bottom: 20px;
   text-align: justify;
@@ -292,7 +294,7 @@ button.button:hover {
   width: 100%;
   display: grid;
   align-content: center;
-  background: var(--grey);
+  background: var(--black);
   color: var(--white);
   text-decoration: none;
   font-size: 18px;
@@ -359,8 +361,10 @@ button.button:hover {
   /* border: 1px solid rgba(0,0,0,0.2); */
   padding: 20px;
   display: grid;
-  background: white;
+  /* background: whitesmoke; */
   max-width: 337px;
+  border-radius: 0 0 10px 10px;
+  border: 1px solid rgb(196, 196, 196);
 }
 
 .well > a.img,
@@ -373,7 +377,7 @@ button.button:hover {
   border: none;
   margin-top: 5px;
   cursor: pointer;
-  background: var(--white);
+  background: whitesmoke;
   padding: 5px 10px;
   font-size: 14px;
 }
@@ -384,7 +388,7 @@ button.button:hover {
 
 .well button:hover {
   background: var(--grey);
-  color: white;
+  color: whitesmoke;
 }
 
 .well h3 {
@@ -399,8 +403,9 @@ button.button:hover {
 
 .content .form-box form#contact {
   display: grid;
-  background: white;
   padding: 10px 20px;
+  background: rgba(128, 128, 128, 0.08);
+  border-top: 3px solid var(--grey);
 }
 
 .content .form-box form#contact label {
@@ -425,10 +430,9 @@ button.button:hover {
 }
 
 .content .form-box input[type='submit'] {
-  background: var(--white);
+  background: white;
   justify-self: end;
   margin-top: 20px;
-  /* font-weight: 600; */
   padding: 10px 35px !important;
   cursor: pointer;
   border: none !important;
@@ -436,7 +440,7 @@ button.button:hover {
 
 .content .form-box input[type='submit']:hover {
   background: var(--grey);
-  color: white;
+  color: whitesmoke;
 }
 
 .articles {
@@ -458,6 +462,15 @@ button.button:hover {
 .article .article-body h3.title {
   padding: 0;
   margin: 0;
+  color: var(--black);
+}
+
+.article .article-body a:hover h3.title {
+  color: var(--grey);
+}
+
+.article .article-body a:hover {
+  text-decoration: none;
 }
 
 .article .article-body .published {
@@ -481,14 +494,14 @@ button.button:hover {
 .button-main {
   border: none;
   cursor: pointer;
-  background: white;
+  background: whitesmoke;
   padding: 5px 10px;
   font-size: 14px;
 }
 
 .button-main:hover {
   background: var(--grey) !important;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--white);
   border: none !important;
 }
 
@@ -496,7 +509,7 @@ button.button:hover {
   margin-top: var(--content-margin);
   /* padding: 10px 0 0 0; */
   background: var(--grey);
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--black);
   line-height: 28px;
   font-weight: 400;
   font-size: 14px;
@@ -517,19 +530,19 @@ button.button:hover {
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
   margin-top: 30px;
   padding-top: 10px;
   text-align: right;
 }
 
 .footer a {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--black);
+  text-decoration: none;
 }
 
 .footer a:hover {
   color: var(--white);
-  text-decoration: none;
 }
 
 .footer-bottom > div {
@@ -559,11 +572,13 @@ button.button:hover {
   width: 100%;
 }
 
-.page-content .site-width a {
+.page-content .first-section a,
+.page-content .second-section a {
   text-decoration: underline;
 }
 
-.page-content .site-width a:hover {
+.page-content .first-section a:hover,
+.page-content .second-section a:hover {
   color: var(--blue);
 }
 
@@ -576,7 +591,7 @@ button.button:hover {
   width: 100%;
   display: grid;
   align-content: center;
-  background: var(--grey);
+  background: var(--black);
   color: var(--white);
   text-decoration: none;
   font-size: 18px;
@@ -616,8 +631,8 @@ button.button:hover {
 
 .second-section {
   padding-top: 20px;
-  background: white;
-  border-top: 3px solid #8DC9FD;
+  background: rgba(128, 128, 128, 0.08);
+  border-top: 3px solid var(--grey);
   max-width: 1120px;
   margin: 20px auto 0 auto;
 }

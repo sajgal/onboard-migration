@@ -37,7 +37,7 @@ class Page extends Component {
           </div>
         </div>
 
-        <div className="site-width">
+        <div className="site-width first-section">
           {submenu && (
             <div className="submenu">
               <ImageBoxRow boxes={submenu} />
