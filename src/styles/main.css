@@ -549,6 +549,7 @@ button.button:hover {
   display: inline-block;
 }
 
+div.footer > div.footer-content.site-width .marn-logo img,
 .footer .marn-logo img {
   width: 130px;
 }
