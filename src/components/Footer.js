@@ -7,9 +7,7 @@ const Footer = props => {
 
   const localeNavigation = menuItems.map(item => (
     <div key={item.id}>
-      <Link to={`/${item.node_locale}/${item.link}/`}>
-        {item.text}
-      </Link>
+      <Link to={`/${item.node_locale}/${item.link}/`}>{item.text}</Link>
     </div>
   ))
 
@@ -30,7 +28,9 @@ const Footer = props => {
     <div className="footer">
       <div className="footer-content site-width">
         <div>
-          <div className="logo">OnBoard</div>
+          <div className="marn-logo">
+            <img src={require('../assets/marn-logo.png')} alt="onBoard" />
+          </div>
         </div>
         <div
           dangerouslySetInnerHTML={{
