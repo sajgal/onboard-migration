@@ -29,7 +29,9 @@ const Footer = props => {
       <div className="footer-content site-width">
         <div>
           <div className="marn-logo">
-            <img src={require('../assets/marn-logo.png')} alt="onBoard" />
+            <a href="https://www.mara.gov.au/" rel="nofollow" target="_blank">
+              <img src={require('../assets/marn-logo.png')} alt="onBoard" />
+            </a>
           </div>
         </div>
         <div
