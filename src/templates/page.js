@@ -38,14 +38,14 @@ class Page extends Component {
         </div>
 
         <div className="site-width first-section">
+          <div
+            dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}
+          />
           {submenu && (
             <div className="submenu">
               <ImageBoxRow boxes={submenu} />
             </div>
           )}
-          <div
-            dangerouslySetInnerHTML={{ __html: body.childMarkdownRemark.html }}
-          />
         </div>
 
         {(secondSectionTitle || secondSectionText || secondSectionList) && (
