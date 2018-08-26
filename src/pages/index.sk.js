@@ -77,17 +77,6 @@ export const pageQuery = graphql`
               html
             }
           }
-          secondSectionBoxes {
-            id
-            text
-            link
-            node_locale
-            image {
-              sizes(maxWidth: 800) {
-                ...GatsbyContentfulSizes
-              }
-            }
-          }
           contactSectionTitle
           contactSectionText {
             childMarkdownRemark {
