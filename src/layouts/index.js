@@ -26,10 +26,10 @@ const TemplateWrapper = ({ children, data, location }) => {
     <IntlProvider locale={langKey} messages={i18nMessages}>
       <div className="site-wrapper">
         <Helmet
-          title="OnBoard Study"
+          title="OnBoard Migration"
           meta={[
-            { name: 'description', content: 'Study agency Australia' },
-            { name: 'keywords', content: 'study, agency' },
+            { name: 'description', content: 'Migration agency Australia' },
+            { name: 'keywords', content: 'migration, agency' },
           ]}
         />
         <HeaderTop langs={langsMenu} />
