@@ -232,6 +232,11 @@ button.button:hover {
   .footer .footer-bottom .contentful {
     width: 100px;
   }
+
+  .page-content .services {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 550px) {
@@ -283,7 +288,7 @@ button.button:hover {
 
 .services {
   display: grid;
-  /* grid-auto-flow: column; */
+  grid-template-columns: repeat(6, auto); 
   grid-gap: 20px;
   margin: 20px 0 0 0;
 }
@@ -296,7 +301,7 @@ button.button:hover {
   background: var(--grey);
   color: var(--white);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 14px;
   overflow: hidden;
   align-items: center;
 }
