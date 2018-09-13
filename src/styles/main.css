@@ -403,6 +403,10 @@ button.button:hover {
   grid-gap: 20px;
 }
 
+.page-content .form-box {
+  grid-template-columns: auto;
+}
+
 .content .form-box form#contact {
   display: grid;
   background: white;

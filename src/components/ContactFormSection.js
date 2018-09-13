@@ -5,15 +5,23 @@ const ContactFormSection = props => {
   return (
     <div className="content site-width">
       <div className="form-box">
-        <div>
-          <h2>{props.data.contactSectionTitle}</h2>
-          <span
-            dangerouslySetInnerHTML={{
-              __html: props.data.contactSectionText.childMarkdownRemark.html,
-            }}
-          />
-        </div>
-        <form id="contact" name="contact" method="POST" data-netlify="true" action="/">
+        {props.data && (
+          <div>
+            <h2>{props.data.contactSectionTitle}</h2>
+            <span
+              dangerouslySetInnerHTML={{
+                __html: props.data.contactSectionText.childMarkdownRemark.html,
+              }}
+            />
+          </div>
+        )}
+        <form
+          id="contact"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          action="/"
+        >
           <label htmlFor="name">
             <FormattedMessage id="name" />
           </label>

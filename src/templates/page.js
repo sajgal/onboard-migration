@@ -4,6 +4,7 @@ import Img from 'gatsby-image'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import ImageBoxRow from '../components/ImageBoxRow'
+import ContactFormSection from '../components/ContactFormSection'
 
 class Page extends Component {
   render() {
@@ -67,6 +68,10 @@ class Page extends Component {
             </div>
           </div>
         )}
+
+        {(this.props.pathContext.slug === 'contacts' ||
+          this.props.pathContext.slug === 'kontakt' ||
+          this.props.pathContext.slug === 'kontakty') && <ContactFormSection />}
 
         <Footer data={homepage} menuItems={menuItems} menuType="top" />
       </div>
