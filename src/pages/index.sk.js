@@ -23,7 +23,7 @@ const IndexPage = ({ data, pathContext }) => {
       <HomepageBoxes data={homepage} lang={pathContext.langKey} />
       <SecondSection data={homepage} lang={pathContext.langKey} />
       <BlogPostList posts={blogPosts} lang={pathContext.langKey} />
-      <ContactFormSection data={homepage} />
+      <ContactFormSection data={homepage} lang={pathContext.langKey} />
       <Footer data={homepage} menuItems={menuItems} menuType="top" />
     </div>
   )
