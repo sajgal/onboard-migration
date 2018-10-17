@@ -647,6 +647,27 @@ div.footer > div.footer-content.site-width .marn-logo img,
   color: var(--blue);
 }
 
+/* --------------- table styling --------------- */
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid var(--black);
+}
+
+table.noborder, table.noborder th, table.noborder td {
+  border: none;
+}
+
+td {
+  padding: 5px 15px;
+}
+
+thead {
+  display: none;
+}
+
 .blog-post-navigation {
   display: grid;
   grid-auto-flow: column;
