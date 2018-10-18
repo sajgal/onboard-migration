@@ -135,12 +135,6 @@ export const pageQuery = graphql`
               text: title
               node_locale
             }
-            ... on ContentfulBlog {
-              id
-              link: slug
-              text: title
-              node_locale
-            }
             ... on ContentfulImageLink {
               id
               link
