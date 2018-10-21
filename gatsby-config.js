@@ -3,8 +3,8 @@ const languages = require('./src/data/languages')
 
 module.exports = {
   siteMetadata: {
-    title: 'onboardstudy.sk',
-    languages
+    title: 'OnBoard Migration',
+    languages,
   },
   plugins: [
     {
