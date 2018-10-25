@@ -15,7 +15,7 @@ const ContactFormSection = props => {
             />
           </div>
         )}
-        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
+        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" action={`/${props.lang}/`}>
           <input type="hidden" name="bot-field" />    
           <label htmlFor="name">
             <FormattedMessage id="name" />
