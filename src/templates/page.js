@@ -71,7 +71,7 @@ class Page extends Component {
 
         {(this.props.pathContext.slug === 'contacts' ||
           this.props.pathContext.slug === 'kontakt' ||
-          this.props.pathContext.slug === 'kontakty') && <ContactFormSection />}
+          this.props.pathContext.slug === 'kontakty') && <ContactFormSection lang={this.props.pathContext.langKey}/>}
 
         <Footer data={homepage} menuItems={menuItems} menuType="top" />
       </div>
