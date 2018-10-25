@@ -11,7 +11,7 @@ class ThanksSk extends Component {
 
     return (
       <div className="page-content">
-        <Navigation lang="en" menuItems={menuItems} menuType="top" />
+        <Navigation lang="sk" menuItems={menuItems} menuType="top" />
 
         <div className="site-width">
           <h1>Ďakujeme</h1>
