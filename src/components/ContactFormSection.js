@@ -16,7 +16,6 @@ const ContactFormSection = props => {
           </div>
         )}
         <form
-          id="contact"
           name="contact"
           method="POST"
           data-netlify="true"

@@ -408,30 +408,30 @@ button.button:hover {
   grid-template-columns: auto;
 }
 
-.content .form-box form#contact {
+.content .form-box form[name=contact] {
   display: grid;
   background: white;
   padding: 10px 20px;
 }
 
-.content .form-box form#contact label {
+.content .form-box form[name=contact] label {
   margin: 20px 0 0 0;
 }
 
-.content .form-box form#contact > label:nth-child(1) {
+.content .form-box form[name=contact] > label:nth-child(1) {
   margin-top: 0;
 }
 
-.content .form-box form#contact input,
-.content .form-box form#contact textarea {
+.content .form-box form[name=contact] input,
+.content .form-box form[name=contact] textarea {
   padding: 10px 5px;
   border: 1px solid rgb(180, 180, 180);
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
 }
 
-.content .form-box form#contact input:focus,
-.content .form-box form#contact textarea:focus {
+.content .form-box form[name=contact] input:focus,
+.content .form-box form[name=contact] textarea:focus {
   border: 2px solid rgb(180, 180, 180);
 }
 
