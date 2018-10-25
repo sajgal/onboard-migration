@@ -20,7 +20,7 @@ const ContactFormSection = props => {
           name="contact"
           method="POST"
           data-netlify="true"
-          netlify
+          netlify="true"
           action={`/${props.lang}/thanks/`}
         >
           <label htmlFor="name">
