@@ -29,7 +29,7 @@ class Page extends Component {
           meta={[
             { name: 'og:type', content: 'article' },
             { name: 'og:title', content: title },
-            { name: 'og:image', content: featuredImage.sizes.src.substring(2) },
+            { name: 'og:image', content: featuredImage.sizes.src && featuredImage.sizes.src.substring(2) },
             {
               name: 'og:description',
               content: body.childMarkdownRemark.excerpt,
