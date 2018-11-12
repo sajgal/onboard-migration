@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
+import Helmet from 'react-helmet'
 
 class BlogPost extends Component {
   render() {
@@ -17,13 +18,31 @@ class BlogPost extends Component {
 
     return (
       <div className="page-content">
-        <Navigation lang={this.props.pathContext.langKey} menuItems={menuItems} menuType="top" />
+        <Helmet
+          title={`${title} | OnBoard`}
+          meta={[
+            { name: 'og:type', content: 'article' },
+            { name: 'og:title', content: title },
+            { name: 'og:image', content: featuredImage.sizes.src.substring(2) },
+            {
+              name: 'og:description',
+              content: content.childMarkdownRemark.excerpt,
+            },
+            { name: 'og:locale', content: this.props.pathContext.langKey },
+          ]}
+        />
+
+        <Navigation
+          lang={this.props.pathContext.langKey}
+          menuItems={menuItems}
+          menuType="top"
+        />
 
         <div className="featured-image-box-full">
           <div className="site-width title-holder">
-          <span>
-            <h1>{title}</h1>
-            <span className="date">{createdAt}</span>
+            <span>
+              <h1>{title}</h1>
+              <span className="date">{createdAt}</span>
             </span>
           </div>
           <div className="img gradient">
@@ -63,6 +82,7 @@ export const pageQuery = graphql`
       content {
         childMarkdownRemark {
           html
+          excerpt
         }
       }
     }
@@ -84,14 +104,14 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulMenu (filter: { node_locale: { eq: $langKey } }) {
+    allContentfulMenu(filter: { node_locale: { eq: $langKey } }) {
       edges {
         node {
           id
           type
           node_locale
           items {
-            ... on ContentfulPage { 
+            ... on ContentfulPage {
               id
               link: slug
               text: title

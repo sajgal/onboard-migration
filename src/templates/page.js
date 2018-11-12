@@ -5,6 +5,7 @@ import Navigation from '../components/Navigation'
 import Footer from '../components/Footer'
 import ImageBoxRow from '../components/ImageBoxRow'
 import ContactFormSection from '../components/ContactFormSection'
+import Helmet from 'react-helmet'
 
 class Page extends Component {
   render() {
@@ -23,6 +24,20 @@ class Page extends Component {
 
     return (
       <div className="page-content">
+        <Helmet
+          title={`${title} | OnBoard`}
+          meta={[
+            { name: 'og:type', content: 'article' },
+            { name: 'og:title', content: title },
+            { name: 'og:image', content: featuredImage.sizes.src.substring(2) },
+            {
+              name: 'og:description',
+              content: body.childMarkdownRemark.excerpt,
+            },
+            { name: 'og:locale', content: this.props.pathContext.langKey },
+          ]}
+        />
+
         <Navigation
           lang={this.props.pathContext.langKey}
           menuItems={menuItems}
@@ -71,7 +86,9 @@ class Page extends Component {
 
         {(this.props.pathContext.slug === 'contacts' ||
           this.props.pathContext.slug === 'kontakt' ||
-          this.props.pathContext.slug === 'kontakty') && <ContactFormSection lang={this.props.pathContext.langKey}/>}
+          this.props.pathContext.slug === 'kontakty') && (
+          <ContactFormSection lang={this.props.pathContext.langKey} />
+        )}
 
         <Footer data={homepage} menuItems={menuItems} menuType="top" />
       </div>
@@ -92,10 +109,11 @@ export const pageQuery = graphql`
       body {
         childMarkdownRemark {
           html
+          excerpt
         }
       }
       featuredImage {
-        sizes(maxWidth: 5000) {
+        sizes(maxWidth: 2000) {
           ...GatsbyContentfulSizes
         }
       }
