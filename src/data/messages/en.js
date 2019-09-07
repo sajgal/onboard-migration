@@ -12,4 +12,8 @@ module.exports = {
   'readMore': 'Read more',
   'previousPage': 'Go to Previous Page',
   'nextPage': 'Go to Next Page',
+  'gdpr_law': '',
+  'gdpr_subject': '',
+  'gdpr_confirmation': '',
+  'gdpr_more_info': '',
 };

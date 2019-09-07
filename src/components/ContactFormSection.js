@@ -34,6 +34,7 @@ export default class ContactFormSection extends React.Component {
   }
 
   render() {
+    const isSlovak = this.props.lang === 'sk'
     return (
       <div className="content site-width">
         <div className="form-box">
@@ -109,6 +110,37 @@ export default class ContactFormSection extends React.Component {
                 />
               )}
             </FormattedMessage>
+
+            {isSlovak && (
+              <label htmlFor="confirmation" className='small'>
+                <FormattedMessage id="gdpr_law"/>
+              </label>
+            )}
+
+            {isSlovak && (
+              <label htmlFor="confirmation" className='small'>
+                <FormattedMessage id="gdpr_subject"/>
+              </label>
+            )}
+
+            {isSlovak && (
+              <label htmlFor="confirmationCheckbox" className='small'>
+                <FormattedMessage id="gdpr_confirmation"/>
+              </label>)}
+
+            {isSlovak && (<input
+              type="checkbox"
+              name="confirmationCheckbox"
+              id="confirmationCheckbox"
+              onChange={this.handleChange}
+              required
+            />)}
+
+
+            {isSlovak && (<label htmlFor="confirmationCheckbox" className='small'>
+              <FormattedMessage id="gdpr_more_info"/>
+              <a href={require('../assets/terms_and_conditions.pdf')} target="_blank">TU</a>
+            </label>)}
 
             <FormattedMessage id="send">
               {text => <input type="submit" value={text} />}
